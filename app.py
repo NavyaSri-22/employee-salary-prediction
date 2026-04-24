@@ -45,7 +45,7 @@ capital_loss = st.sidebar.slider("Capital Loss", 0, 4356, 0)
 native_country = st.sidebar.selectbox("Native Country", [
     "United-States", "mexcio", "Germany"])
 # Build input DataFrame (⚠️ must match preprocessing of your training data)
-input_df = pd.DataFrame([
+input_df = input_df([
     'age', 'workclass', 'fnlwgt', 'educational-num', 'marital-status',
        'occupation', 'relationship', 'race', 'gender', 'capital-gain',
        'capital-loss', 'hours-per-week', 'native-country'],
