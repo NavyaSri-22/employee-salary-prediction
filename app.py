@@ -60,7 +60,12 @@ input_df = pd.DataFrame({
     'hours-per-week': [hours_per_week],
     'native-country': [native_country]
 })
+from sklearn.preprocessing import LabelEncoder
 
+encoder = LabelEncoder()
+
+for col in input_df.select_dtypes(include='object').columns:
+    input_df[col] = encoder.fit_transform(input_df[col])
 
 st.write("### 🔎 Input Data")
 st.write(input_df)
