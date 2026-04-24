@@ -3,9 +3,8 @@ import pandas as pd
 import joblib
 
 # Load the trained model
-import pickle
-with open("best_model.pkl", "rb") as f:
-    model = pickle.load(f)
+import joblib
+model = joblib.load("best_model.pkl")
 
 st.set_page_config(page_title="Employee Salary Classification", page_icon="💼", layout="centered")
 
